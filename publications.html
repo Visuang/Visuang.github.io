@@ -146,6 +146,58 @@
                             <div class="row g-4">
                                 <!--单个论文开始1-->
                                 <h5 class=" ff-secondary   " style="font-size: 30px">2025</h5>
+ <!-- 单个论文卡片 -->
+                                <div class="col-lg-12">
+                                    <div class="paper-card p-3">
+                                        <div class="d-flex align-items-start">
+                                            <!-- 论文图片 -->
+                                            <div class="col-lg-3 col-sm-3">
+                                                <img src="./paper_img/VLD.png" alt="Zoom Image" class="zoom-image">
+                                            </div>
+
+                                            <!-- 论文信息 -->
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <!-- 论文标题 -->
+                                                <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: 3px;">
+                                                    <span style="font-weight: bold;">Video-Level Language-Driven Video-Based Visible-Infrared Person Re-Identification</span>
+                                                    <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/10930619" target="_blank">
+                                                        <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                                    </a>
+                                                </h5>
+
+                                                <!-- 作者列表 -->
+                                                <p class="author-list" style="margin-top: 3px; margin-bottom: 3px; font-size: 14px; color: #555;">
+                                                    <strong>Shuang Li</strong>, Jiaxu Leng📧, Changjian Kuang, Mingpi Tan, Xinbo Gao📧
+                                                </p>
+
+                                                <!-- 期刊信息 -->
+                                                <p class="journal-info fst-italic" style="margin-top: 3px; margin-bottom: 8px; font-weight: bold; color: #333;">
+                                                    IEEE Transactions on Information Forensics and Security (TIFS), 2025
+                                                </p>
+
+                                                <!-- 分割线 -->
+                                                <hr class="divider" style="margin: 8px 0;">
+
+                                                <!-- 论文摘要 -->
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 8px;">
+                                                Video-based Visible-Infrared Person Re-Identification (VVI-ReID) aims to match pedestrian sequences across modalities by extracting modality-invariant sequence-level features. As a high-level semantic representation, language provides a consistent description of pedestrian characteristics in both infrared and visible modalities. Leveraging the Contrastive Language-Image Pre-training (CLIP) model to generate video-level language prompts and guide the learning of modality-invariant sequence-level features is theoretically feasible.
+                                                However, the challenge of generating and utilizing modality-shared video-level language prompts to address modality gaps remains a critical problem.
+                                                To address this problem, we propose a simple yet powerful framework, video-level language-driven VVI-ReID (VLD), which consists of two core modules: invariant-modality language prompting (IMLP) and spatial-temporal prompting (STP).  
+                                                IMLP employs a joint fine-tuning strategy for the visual encoder and the prompt learner to effectively generate modality-shared text prompts and align them with visual features from different modalities in CLIP's multimodal space, thereby mitigating modality differences.  
+                                                Additionally, STP models spatiotemporal information through two submodules, the spatial-temporal hub (STH) and spatial-temporal aggregation (STA), which further enhance IMLP by incorporating spatiotemporal information into text prompts. The STH aggregates and diffuses spatiotemporal information into the [CLS] token of each frame across the vision transformer (ViT) layers, whereas STA introduces dedicated identity-level loss and specialized multihead attention to ensure that the STH focuses on identity-relevant spatiotemporal feature aggregation.  
+                                                The VLD framework achieves state-of-the-art results on two VVI-ReID benchmarks. On the HITSZ-VCM dataset, it improves the Rank-1 accuracy by 7.3\% and mAP by 7.6% (infrared-to-visible) and the Rank-1 accuracy by 10.4% and the mAP accuracy by 9.3% (visible to infrared) and requires only 2 hours of training, 2.39M additional parameters, and 0.12G FLOPs. 
+                                                </p>
+
+                                                <!-- <p style="font-size: 14px; line-height: 1.5; color: #444;">
+                                                    To address these challenges, we propose the Shape-centered Representation Learning (ScRL) framework, which enhances VI-ReID performance by innovatively integrating shape and appearance features. Specifically, we introduce Infrared Shape Restoration (ISR) to restore inaccuracies in infrared body shape representations at the feature level by leveraging infrared appearance features. In addition, we propose Shape Feature Propagation (SFP), which enables the direct extraction of shape features from original images during inference with minimal computational complexity. Furthermore, we design Appearance Feature Enhancement (AFE), which utilizes shape features to emphasize shape-related appearance features while effectively suppressing identity-unrelated noise.
+Benefiting from the effective integration of shape and appearance features, ScRL demonstrates superior performance through extensive experiments.
+                                                </p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!--单个论文开始1-->
+
                                 <!-- 单个论文卡片 -->
                                 <div class="col-lg-12">
                                     <div class="paper-card p-3">
