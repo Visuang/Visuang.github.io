@@ -144,8 +144,102 @@
 
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
+
+                                
                                 <!--单个论文开始1-->
                                 <h5 class=" ff-secondary   " style="font-size: 30px">2025</h5>
+                                <!-- 单个论文卡片 -->
+                                <div class="col-lg-12">
+                                    <div class="paper-card p-3">
+                                        <div class="d-flex align-items-start">
+                                            <!-- 论文图片 -->
+                                            <div class="col-lg-3 col-sm-3">
+                                                <img src="./paper_img/FED.png" alt="Zoom Image" class="zoom-image">
+                                            </div>
+
+                                            <!-- 论文信息 -->
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <!-- 论文标题 -->
+                                                <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: 3px;">
+                                                    <span style="font-weight: bold;">Deepfake Detection Leveraging Self-Blended Artifacts Guided by Facial Embedding Discrepancy</span>
+                                                    <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/10930619" target="_blank">
+                                                        <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                                    </a>
+                                                </h5>
+
+                                                <!-- 作者列表 -->
+                                                <p class="author-list" style="margin-top: 3px; margin-bottom: 3px; font-size: 14px; color: #555;">
+                                                    Shanshan Han, <strong><u>Shuang Li</u></strong>, Shuodi Wang, Lin Yuan<i class="fas fa-envelope"></i>, Yan Zhang, Xinbo Gao<i class="fas fa-envelope"></i>
+                                                </p>
+
+                                                <!-- 期刊信息 -->
+                                                <p class="journal-info fst-italic" style="margin-top: 3px; margin-bottom: 8px; font-weight: bold; color: #333;">
+                                                    IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2025
+                                                </p>
+
+                                                <!-- 分割线 -->
+                                                <hr class="divider" style="margin: 8px 0;">
+
+                                                <!-- 论文摘要 -->
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 8px;">
+                                                    Current deepfake detection methods commonly use data augmentation and authenticity-content disentanglement to extract more generalized features for detection tasks. However, these methods rely exclusively on low-level spatial artifacts to distinguish real from fake images, which presents significant challenges in accurately capturing the rich forgery cues. Deepfakes create discrepancies between forged and original facial features within the face-recognition (FR) embedding space, which can serve as an additional cue for detection. 
+                                                </p>
+
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444;">
+                                                To better exploit the artifacts in deepfake images, we propose a novel detection method that enhances the detector’s perception capability by incorporating not only the real and fake samples during training, but also the visual residual between real and fake images. Meanwhile, we integrate the discrepancy in facial embedding between the real and fake samples into the training procedure of artifact extraction, serving as a guidance signal with strong knowledge provided by the pretrained face recognition model. Specialized distillation loss along with additional cross-entropy losses are designed to enhance the detection capability. Experiments on multiple benchmarks demonstrate the superiority of the proposed approach in deepfake detection over literature methods.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!--单个论文开始1-->
+
+
+                                                                 <!-- 单个论文卡片 -->
+                                <div class="col-lg-12">
+                                    <div class="paper-card p-3">
+                                        <div class="d-flex align-items-start">
+                                            <!-- 论文图片 -->
+                                            <div class="col-lg-3 col-sm-3">
+                                                <img src="./paper_img/VSP.png" alt="Zoom Image" class="zoom-image">
+                                            </div>
+
+                                            <!-- 论文信息 -->
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <!-- 论文标题 -->
+                                                <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: 3px;">
+                                                    <span style="font-weight: bold;">Transferring and Refining Visual-Semantic Priors via Graph-Enhanced CLIP for 3D Hand Pose Estimation</span>
+                                                    <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/10930619" target="_blank">
+                                                        <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                                    </a>
+                                                </h5>
+
+                                                <!-- 作者列表 -->
+                                                <p class="author-list" style="margin-top: 3px; margin-bottom: 3px; font-size: 14px; color: #555;">
+                                                    Tingting Liu, Ji Gan<i class="fas fa-envelope"></i>, Jiaxu Leng, <strong><u>Shuang Li</u></strong>, Lei Chen, Xinbo Gao<i class="fas fa-envelope"></i>
+                                                </p>
+
+                                                <!-- 期刊信息 -->
+                                                <p class="journal-info fst-italic" style="margin-top: 3px; margin-bottom: 8px; font-weight: bold; color: #333;">
+                                                    Transactions on Multimedia (TMM), 2025
+                                                </p>
+
+                                                <!-- 分割线 -->
+                                                <hr class="divider" style="margin: 8px 0;">
+
+                                                <!-- 论文摘要 -->
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 8px;">
+                                                    3D hand pose estimation is crucial for many humancomputer interaction applications. However, existing deep neural networks (DNNs) for 3D hand pose estimation suffer from poor generalization capability due to data scarcity and lack of domainspecific knowledge. In contrast, humans remain far better than DNNs at learning, which requires fewer exemplars for learning new concepts under the guidance of their prior knowledge. Inspired by this, we propose a Graph-Enhanced CLIP to deliver visual-semantic priors to DNNs and refine the domain-specific knowledge for better 3D hand pose estimation. 
+                                                </p>
+
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444;">
+                                                Specifically, we first introduce a pre-trained CLIP to guide the hand estimation model learning semantic-aware visual features, where text-free contrastive learning is proposed to effectively transfer high-level visual-semantic priors from the pre-trained large multi-modal models (LLMs). It is worth noting that our strategy is dataagnostic and can avoid designing hand-crafted text prompts for various visual inputs. Secondly, we further introduce novel graph Transformers to refine the domain-specific knowledge by fully exploiting local adjacent relations of hand joints and capturing the global structure representation of hand poses. The introduced graph Transformers are supposed to further refine the generalized CLIP feature for the downstream task (i.e., hand pose estimation) with better performance. Experiments show that our proposed graph-enhanced CLIP has achieved state-ofthe-art performance on benchmark datasets, demonstrating its effectiveness for 3D hand pose estimation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!--单个论文开始1-->
  <!-- 单个论文卡片 -->
                                 <div class="col-lg-12">
                                     <div class="paper-card p-3">
