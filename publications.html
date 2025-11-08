@@ -149,7 +149,102 @@
                                 <!--单个论文开始1-->
                                 <h5 class=" ff-secondary   " style="font-size: 30px">2025</h5>
 
+                                <!-- 单个论文卡片 -->
+                                <div class="col-lg-12">
+                                    <div class="paper-card p-3">
+                                        <div class="d-flex align-items-start">
+                                            <!-- 论文图片 -->
+                                            <div class="col-lg-3 col-sm-3">
+                                                <img src="./paper_img/HPL.png" alt="Zoom Image" class="zoom-image">
+                                            </div>
 
+                                            <!-- 论文信息 -->
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <!-- 论文标题 -->
+                                                <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: 3px;">
+                                                    <span style="font-weight: bold;">Hierarchical Prompt Learning for Image- and Text-Based Person Re-Identification</span>
+                                                    <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/10930619" target="_blank">
+                                                        <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                                    </a>
+                                                </h5>
+
+                                                <!-- 作者列表 -->
+                                                <p class="author-list" style="margin-top: 3px; margin-bottom: 3px; font-size: 14px; color: #555;">
+                                                    Linhan Zhou<sup>*</sup>, <strong><u>Shuang Li<sup>*</sup></u></strong>, Neng Dong, Yonghang Tai, Yafei Zhang, Huafeng Li
+                                                </p>
+
+                                                <!-- 期刊信息 -->
+                                                <p class="journal-info fst-italic" style="margin-top: 3px; margin-bottom: 8px; font-weight: bold; color: #333;">
+                                                    AAAI Conference on Artificial Intelligence (AAAI), 2026
+                                                </p>
+
+                                                <!-- 分割线 -->
+                                                <hr class="divider" style="margin: 8px 0;">
+
+                                                <!-- 论文摘要 -->
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 8px;">
+                                                Person re-identification (ReID) aims to retrieve target pedestrian images given either visual queries (image-to-image, I2I)  or textual descriptions (text-to-image, T2I). Although both tasks share a common retrieval objective, they pose distinct challenges: I2I emphasizes discriminative identity learning, while T2I requires accurate cross-modal semantic alignment. Existing methods often treat these tasks separately, which may lead to representation entanglement and suboptimal performance. To address this, we propose a unified framework named Hierarchical Prompt Learning (HPL), which leverages task-aware prompt modeling to jointly optimize both tasks.
+                                                </p>
+
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444;">
+                                                 Specifically, we first introduce a Task-Routed Transformer, which incorporates dual classification tokens into a shared visual encoder to route features for I2I and T2I branches respectively. On top of this, we develop a hierarchical prompt generation scheme that integrates identity-level learnable tokens with instance-level pseudo-text tokens. These pseudo-tokens are derived from image or text features via modality-specific inversion networks, injecting fine-grained, instance-specific semantics into the prompts. Furthermore, we propose a Cross-Modal Prompt Regularization strategy to enforce semantic alignment in the prompt token space, ensuring that pseudo-prompts preserve source-modality characteristics while enhancing cross-modal transferability.
+Extensive experiments on multiple ReID benchmarks validate the effectiveness of our method, achieving state-of-the-art performance on both I2I and T2I tasks. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!--单个论文开始1-->
+
+                                
+                                <!-- 单个论文卡片 -->
+                                <div class="col-lg-12">
+                                    <div class="paper-card p-3">
+                                        <div class="d-flex align-items-start">
+                                            <!-- 论文图片 -->
+                                            <div class="col-lg-3 col-sm-3">
+                                                <img src="./paper_img/DSC.png" alt="Zoom Image" class="zoom-image">
+                                            </div>
+
+                                            <!-- 论文信息 -->
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <!-- 论文标题 -->
+                                                <h5 class="d-flex justify-content-between pb-2" style="margin-bottom: 3px;">
+                                                    <span style="font-weight: bold;">Dynamic-Static Collaboration for Unsupervised Domain Adaptive Video-Based Visible-Infrared Person Re-Identification</span>
+                                                    <a class="btn btn-square btn-primary mx-1" href="https://ieeexplore.ieee.org/abstract/document/10930619" target="_blank">
+                                                        <img src="img/paper_link.png" alt="Paper Link" width="20" height="20">
+                                                    </a>
+                                                </h5>
+
+                                                <!-- 作者列表 -->
+                                                <p class="author-list" style="margin-top: 3px; margin-bottom: 3px; font-size: 14px; color: #555;">
+                                                    Jiaxu Leng, Zhengjie Wang, <strong><u>Shuang Li</u></strong> <i class="fas fa-envelope"></i>, Xinbo Gao<i class="fas fa-envelope"></i>
+                                                </p>
+
+                                                <!-- 期刊信息 -->
+                                                <p class="journal-info fst-italic" style="margin-top: 3px; margin-bottom: 8px; font-weight: bold; color: #333;">
+                                                    AAAI Conference on Artificial Intelligence (AAAI), 2026
+                                                </p>
+
+                                                <!-- 分割线 -->
+                                                <hr class="divider" style="margin: 8px 0;">
+
+                                                <!-- 论文摘要 -->
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 8px;">
+                                                    Video-based visible-infrared person re-identification (VVI-ReID) aims to match pedestrian sequences across modalities for all-day surveillance. While supervised methods have shown progress, their dependence on large-scale cross-modal annotations limits scalability.
+We investigate the task of unsupervised domain adaptation for VVI-ReID (UDA-VVI-ReID), where a model trained on a labeled source domain is adapted to an unlabeled target domain. Directly extending existing image-based unsupervised VI-ReID methods to video scenarios by simply averaging frame-level features is suboptimal, as this naive strategy neglects the rich temporal dynamics in video data and leads to unreliable pseudo-labels due to occlusion-induced noise.
+                                                </p>
+
+                                                <p style="font-size: 14px; line-height: 1.5; color: #444;">
+                                                To overcome these limitations, we propose a Dynamic-Static Collaboration (DSC) framework that explicitly leverages the complementary strengths of motion and appearance cues. The Dynamic-Static Label Unification (DSLU) module refines pseudo-labels by validating the consistency between static and dynamic predictions. Based on these labels, the Dynamic-Static Joint Learning (DSJL) module performs neighbor-aware contrastive learning in both feature spaces, promoting robust representation learning under cross-modal and temporal variations.
+Experiments on HITSZ-VCM and BUPTCampus show that DSC sets a strong baseline for this new task, enabling robust cross-modal video ReID without target labels. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!--单个论文开始1-->
+                                
                                 <!-- 单个论文卡片 -->
                                 <div class="col-lg-12">
                                     <div class="paper-card p-3">
@@ -184,13 +279,11 @@
 
                                                 <!-- 论文摘要 -->
                                                 <p style="font-size: 14px; line-height: 1.5; color: #444; margin-bottom: 8px;">
-                                                    Video-based visible-infrared person re-identification (VVI-ReID) aims to match pedestrian sequences across modalities for all-day surveillance. While supervised methods have shown progress, their dependence on large-scale cross-modal annotations limits scalability.
-We investigate the task of unsupervised domain adaptation for VVI-ReID (UDA-VVI-ReID), where a model trained on a labeled source domain is adapted to an unlabeled target domain. Directly extending existing image-based unsupervised VI-ReID methods to video scenarios by simply averaging frame-level features is suboptimal, as this naive strategy neglects the rich temporal dynamics in video data and leads to unreliable pseudo-labels due to occlusion-induced noise.
+                                                Face super-resolution (FSR) aims to reconstruct high-resolution (HR) face images from low-resolution (LR) inputs. While recent methods have advanced this task through architectural innovations and generative modeling, but they often leads to semantically inconsistent structures and unrealistic textures, particularly under high magnification. To mitigate these limitations, we draw inspiration from the human artistic process of “structuring before detailing” and propose a progressive prior-guided restoration strategy. 
                                                 </p>
 
                                                 <p style="font-size: 14px; line-height: 1.5; color: #444;">
-                                                To overcome these limitations, we propose a Dynamic-Static Collaboration (DSC) framework that explicitly leverages the complementary strengths of motion and appearance cues. The Dynamic-Static Label Unification (DSLU) module refines pseudo-labels by validating the consistency between static and dynamic predictions. Based on these labels, the Dynamic-Static Joint Learning (DSJL) module performs neighbor-aware contrastive learning in both feature spaces, promoting robust representation learning under cross-modal and temporal variations.
-Experiments on HITSZ-VCM and BUPTCampus show that DSC sets a strong baseline for this new task, enabling robust cross-modal video ReID without target labels. 
+                                                Specifically, we first introduce a Sketching Structure Prior (SSP) module that embeds global semantics and refines local geometry through implicit parsing guidance and explicit spatial modulation. Then, an Associative Texture Prior (ATP) module leverages a High-Quality Dictionary (HD) learned from high-quality reconstruction to guide fine-grained detail recovery. Finally, to unify structure and detail features, we design a Holistic Prior Fusion (HPF) module that adaptively integrates them within semantically consistent facial regions. Extensive evaluations on CelebA and Helen datasets demonstrate that our method achieves superior performance in both structural fidelity and texture realism compared to existing state-of-the-art approaches.
                                                 </p>
                                             </div>
                                         </div>
@@ -1183,5 +1276,6 @@ Benefiting from the effective integration of shape and appearance features, ScRL
 </body>
 
 </html>
+
 
 
