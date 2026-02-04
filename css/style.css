@@ -713,7 +713,35 @@
     color: #444;
 }
 
+.paper-meta{
+  display:flex;
+  align-items:baseline;      /* 关键：基线对齐，看起来更“正” */
+  gap:12px;
+  flex-wrap:wrap;
+}
 
+.paper-meta-right{
+  display:inline-flex;
+  align-items:baseline;
+  gap:8px;                   /* 2026 和 badge 的间距 */
+}
+
+.meta-year{
+  color:#374151;
+  font-weight:600;
+  font-size:16px;            /* 你图里 2026 稍大，这里稳一点 */
+}
+
+.meta-badge{
+  font-size:13px;
+  font-weight:700;
+  line-height:1;
+  padding:4px 8px;
+  border-radius:999px;
+  border:1px solid rgba(29,78,216,.25);
+  background:rgba(29,78,216,.10);  /* 更柔和，不像一坨高亮 */
+  color:#1d4ed8;
+}
 
 
 
