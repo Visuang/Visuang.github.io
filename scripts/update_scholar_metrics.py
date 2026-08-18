@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -49,6 +50,47 @@ class MetricsParser(HTMLParser):
 
 
 def fetch_metrics() -> tuple[int, int]:
+    api_key = os.environ.get("SERPAPI_API_KEY", "").strip()
+    if api_key:
+        return fetch_serpapi_metrics(api_key)
+
+    try:
+        return fetch_scholar_directly()
+    except RuntimeError as exc:
+        raise RuntimeError(
+            f"{exc}. GitHub-hosted runners are commonly blocked by Google Scholar; "
+            "add a SERPAPI_API_KEY repository secret"
+        ) from exc
+
+
+def fetch_serpapi_metrics(api_key: str) -> tuple[int, int]:
+    url = "https://serpapi.com/search.json?" + urllib.parse.urlencode(
+        {
+            "engine": "google_scholar_author",
+            "author_id": SCHOLAR_ID,
+            "hl": "en",
+            "api_key": api_key,
+        }
+    )
+    request = urllib.request.Request(url, headers={"Accept": "application/json"})
+    try:
+        with urllib.request.urlopen(request, timeout=45) as response:
+            payload = json.load(response)
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"SerpApi request failed: {exc}") from exc
+
+    if payload.get("error"):
+        raise RuntimeError(f"SerpApi error: {payload['error']}")
+    try:
+        table = payload["cited_by"]["table"]
+        citations = int(table[0]["citations"]["all"])
+        h_index = int(table[1]["h_index"]["all"])
+    except (KeyError, IndexError, TypeError, ValueError) as exc:
+        raise RuntimeError("SerpApi returned an unexpected Scholar response") from exc
+    return citations, h_index
+
+
+def fetch_scholar_directly() -> tuple[int, int]:
     request = urllib.request.Request(
         PROFILE_URL,
         headers={
