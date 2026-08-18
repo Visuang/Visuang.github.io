@@ -1,2 +1,12 @@
 _reference/
 .DS_Store
+__pycache__/
+*.py[cod]
+tmp/
+resume_latex_shuangli.zip
+resume_latex_shuangli/*.aux
+resume_latex_shuangli/*.log
+resume_latex_shuangli/*.out
+resume_latex_shuangli/*.pdf
+resume_latex_shuangli/*.synctex.gz
+resume_latex_shuangli/fonts/zh_CN-Adobe/

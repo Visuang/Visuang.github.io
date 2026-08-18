@@ -1,0 +1,85 @@
+name: Update Google Scholar metrics
+
+on:
+  schedule:
+    # 09:17 in Asia/Shanghai. A non-round minute reduces scheduler congestion.
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: scholar-and-pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and update Scholar metrics
+        run: python scripts/update_scholar_metrics.py
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install XeLaTeX and CJK fonts
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-lang-chinese texlive-latex-extra fonts-noto-cjk
+
+      - name: Rebuild CV
+        if: steps.changes.outputs.changed == 'true'
+        working-directory: resume_latex_shuangli
+        run: xelatex -interaction=batchmode -halt-on-error ShuangLi.tex
+
+      - name: Publish rebuilt CV
+        if: steps.changes.outputs.changed == 'true'
+        run: cp resume_latex_shuangli/ShuangLi.pdf files/ShuangLi.pdf
+
+      - name: Commit updated metrics
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html zh.html data/scholar_metrics.json files/ShuangLi.pdf resume_latex_shuangli/ShuangLi.tex
+          git commit -m "Update Google Scholar metrics"
+          git push
+
+      - name: Configure GitHub Pages
+        if: steps.changes.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: steps.changes.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Deploy GitHub Pages
+        if: steps.changes.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
